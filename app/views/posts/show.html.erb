@@ -6,7 +6,11 @@
 </p>
 
 <p>
+	<% if @post.has_photo? %>
  	<%= image_tag @post.photo_path %>
+ 	<% else %>
+ 		<b>Problema al subir tu foto</b>ç
+ 	<% end %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
